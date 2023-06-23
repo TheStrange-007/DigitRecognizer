@@ -37,7 +37,7 @@ python server.py
 
 5. Draw a digit in the provided interface, and the trained model will predict the corresponding digit.
 
-Alternatively, you can quickly try the deployed model at [https://digitsrecognizer-using-cnn.thestrange-007.repl.co](https://digitsrecognizer-using-cnn.thestrange-007.repl.co).
+Alternatively, you can quickly try the deployed model at [https://cnn-digitrecognizer.thestrange-007.repl.co](https://cnn-digitrecognizer.thestrange-007.repl.co).
 
 ## Model Training
 
