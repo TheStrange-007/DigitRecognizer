@@ -27,7 +27,7 @@
     </div>
 
     <!--chart start-->
-    <div class="chart">
+    <div class="chart" style="display: none;">
       <ul class="bars">
         <li><div class="bar" data-percentage="0"></div><span>0</span></li>
         <li><div class="bar" data-percentage="0"></div><span>1</span></li>
@@ -45,8 +45,18 @@
     
   </main>
 
-  <script src="{{url_for('static', filename='script.js')}}"></script>
+    <!-- js for displaying probability bar chart on only devices with sufficient screen size -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var chart = document.getElementsByClassName('chart')[0];
+        if (window.screen.width >= 1080 && window.screen.height >= 720) {
+          chart.style.display = 'block';
+        }
+      });
+    </script>
+  
+      <!-- loading main js for app -->
+    <script src="{{url_for('static', filename='script.js')}}"></script>
 
 </body>
-
 </html>
