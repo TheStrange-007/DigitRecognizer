@@ -1,4 +1,4 @@
-# CNN Digit Recognizer with MNIST Dataset and Flask Server
+# CNN Digit Recognizer
 
 This repository contains a deep learning project that utilizes Convolutional Neural Networks (CNN) to build a digit recognizer using the MNIST dataset. The MNIST dataset consists of a large collection of handwritten digit images, commonly used as a benchmark in the field of computer vision.
 
