@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Recognizer</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  <header>
+    <h2>Digit Recognizer using CNN</h2>
+  </header>
+
+  <main>
+    <div class="canvas-container">
+      <canvas id="canvas" width="280" height="280"></canvas>
+    </div>
+    <div class="button-container">
+      <button id="clearBtn" onclick="javascript:clearArea();return false;">Clear Area</button>
+      <button id="predictBtn">Predict</button>
+      <button id="saveBtn">Save</button>
+    </div>
+    <div class="output-container">
+      <div id="prediction">Draw Sufficiently Large Digit</div>
+    </div>
+
+    <!--chart start-->
+    <div class="chart">
+      <ul class="bars">
+        <li><div class="bar" data-percentage="0"></div><span>0</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>1</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>2</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>3</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>4</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>5</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>6</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>7</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>8</span></li>
+        <li><div class="bar" data-percentage="0"></div><span>9</span></li>
+      </ul>
+    </div>
+    <!--chart end-->
+    
+  </main>
+
+  <script src="{{url_for('static', filename='script.js')}}"></script>
+
+</body>
+
+</html>

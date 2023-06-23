@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #333333;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 1px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  background-color: black;
+  border: 2px solid white;
+  display: block;
+  margin: 0 auto;
+}
+
+.canvas-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.button-container button {
+  background-color: #f2f2f2;
+  border: none;
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #333333;
+  color: #f2f2f2;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.output-container div {
+  margin: 5px 0;
+}
+
+#prediction {
+  font-size: 1.2em;
+  font-weight: 800; /* or use "bold" for a more conventional value */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 720px) {
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.chart{
+  width: 1000px;
+  height: 160px;
+  display: block;
+}
+
+.bars{
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  background: #555;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 1000px;
+  height: 160px;
+  box-shadow: 0 0 10px 0 #555;
+  border-radius: 5px;
+}
+
+.bars li{
+  display: table-cell;
+  width: 1000px;
+  height: 160px;
+  position: relative;
+}
+
+.bars span{
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+}
+
+.bars .bar{
+  display: block;
+  background: #17C0EB;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 25px;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+}
+
+.bars .bar:hover{
+  background: #55EFC4;
+  box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+  cursor: pointer;
+}
+
+.bars .bar:before{
+  color: #fff;
+  content: attr(data-percentage) '%';
+  position: relative;
+  bottom: 20px;
+}
