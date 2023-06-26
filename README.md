@@ -10,6 +10,7 @@ The project requires the following main packages to be installed:
 - matplotlib
 - tensorflow
 - keras
+- opencv-python
 
 Please ensure you have these packages installed with the appropriate versions.
 
